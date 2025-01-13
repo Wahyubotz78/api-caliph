@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cyclic-software/express-hello-world.git"
+    "url": "git+https://github.com/NothHDR/api-caliph.git"
   },
   "author": "Cyclic Software",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cyclic-software/express-hello-world/issues"
+    "url": "https://github.com/NothHDR/api-caliph/issues"
   },
-  "homepage": "https://github.com/cyclic-software/express-hello-world#readme",
+  "homepage": "https://github.com/NothHDR/api-caliph#readme",
   "dependencies": {
     "axios": "^0.24.0",
     "caliph-api": "^1.0.1",
