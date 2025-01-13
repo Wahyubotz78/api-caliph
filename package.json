@@ -46,7 +46,7 @@
     "imgbb-uploader": "^1.3.3",
     "jsdom": "^19.0.0",
     "kasu.nhentaiapi.js": "3.7.9",
-    "knights-canvas": "github:squad-404/knights-canvas",
+    "knights-canvas": "github:Dzancok/knights-canvas",
     "lodash": "^4.17.21",
     "memorystore": "^1.6.6",
     "mime-types": "^2.1.34",
