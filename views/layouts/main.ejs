@@ -1,0 +1,25 @@
+<%- include('header') %>
+
+    <body>
+        <div class='loader'>
+            <div class='spinner-grow text-mel' role='status'>
+                <span class='sr-only'>Loading...</span>
+            </div>
+        </div>
+        <div class="page-container">
+
+            <%- include('nav') %>
+
+                <%- include('sidebar') %>
+
+                    <div class="page-content">
+                        <div class="main-wrapper">
+
+                            <%- body %>
+
+                        </div>
+                    </div>
+
+        </div>
+
+        <%- include('footer') %>

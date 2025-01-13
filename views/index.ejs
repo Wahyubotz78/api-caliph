@@ -1,0 +1,149 @@
+<div class="card card-statistics">
+  <div class="card-body statistics-body mt-1">
+    <div class="row">
+      <div class="col-md-3 col-sm-6 col-12 mb-2 mb-md-0">
+        <div class="d-flex flex-row">
+          <div class="avatar bg-light-primary me-2">
+            <div class="avatar-content">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-activity" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M6 2a.5.5 0 0 1 .47.33L10 12.036l1.53-4.208A.5.5 0 0 1 12 7.5h3.5a.5.5 0 0 1 0 1h-3.15l-1.88 5.17a.5.5 0 0 1-.94 0L6 3.964 4.47 8.171A.5.5 0 0 1 4 8.5H.5a.5.5 0 0 1 0-1h3.15l1.88-5.17A.5.5 0 0 1 6 2Z" />
+              </svg>
+            </div>
+          </div>
+          <div class="my-auto">
+            <h4 class="fw-bolder mb-0">
+              <%- today %>
+            </h4>
+            <p class="card-text font-small-3 mb-0">
+              TODAY REQUESTS
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 col-12 mb-2 mb-md-0">
+        <div class="d-flex flex-row">
+          <div class="avatar bg-light-info me-2">
+            <div class="avatar-content">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" class="feather feather-user avatar-icon">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+          </div>
+          <div class="my-auto">
+            <h4 class="fw-bolder mb-0">
+              <%- userTotal %>
+            </h4>
+            <p class="card-text font-small-3 mb-0">
+              USERS
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 col-12 mb-2 mb-md-0">
+        <div class="d-flex flex-row">
+          <div class="avatar bg-light-info me-2">
+            <div class="avatar-content">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-speedometer2" viewBox="0 0 16 16">
+                <path d="M8 4a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4zM3.732 5.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 10a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 10zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 9.31a.91.91 0 1 0 1.302 1.258l3.434-4.297a.389.389 0 0 0-.029-.518z" />
+                <path fill-rule="evenodd" d="M0 10a8 8 0 1 1 15.547 2.661c-.442 1.253-1.845 1.602-2.932 1.25C11.309 13.488 9.475 13 8 13c-1.474 0-3.31.488-4.615.911-1.087.352-2.49.003-2.932-1.25A7.988 7.988 0 0 1 0 10zm8-7a7 7 0 0 0-6.603 9.329c.203.575.923.876 1.68.63C4.397 12.533 6.358 12 8 12s3.604.532 4.923.96c.757.245 1.477-.056 1.68-.631A7 7 0 0 0 8 3z" />
+              </svg>
+            </div>
+          </div>
+          <div class="my-auto">
+            <h4 class="fw-bolder mb-0">
+              <%- rt / 1000 %> Seconds
+            </h4>
+            <p class="card-text font-small-3 mb-0">
+              Response Time
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 col-12 mb-2 mb-sm-0">
+        <div class="d-flex flex-row">
+          <div class="avatar bg-light-danger me-2">
+            <div class="avatar-content">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-broadcast" viewBox="0 0 16 16">
+                <path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707zm2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708zm5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708zm2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0z" />
+              </svg>
+            </div>
+          </div>
+          <div class="my-auto">
+            <h4 class="fw-bolder mb-0">
+              <%- total %>
+            </h4>
+            <p class="card-text font-small-3 mb-0">
+              TOTAL REQUESTS
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 col-12">
+        <div class="d-flex flex-row">
+          <div class="avatar bg-light-success me-2">
+            <div class="avatar-content">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-wifi" viewBox="0 0 16 16">
+                <path d="M15.384 6.115a.485.485 0 0 0-.047-.736A12.444 12.444 0 0 0 8 3C5.259 3 2.723 3.882.663 5.379a.485.485 0 0 0-.048.736.518.518 0 0 0 .668.05A11.448 11.448 0 0 1 8 4c2.507 0 4.827.802 6.716 2.164.205.148.49.13.668-.049z" />
+                <path d="M13.229 8.271a.482.482 0 0 0-.063-.745A9.455 9.455 0 0 0 8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745.525.525 0 0 0 .652.065A8.46 8.46 0 0 1 8 7a8.46 8.46 0 0 1 4.576 1.336c.206.132.48.108.653-.065zm-2.183 2.183c.226-.226.185-.605-.1-.75A6.473 6.473 0 0 0 8 9c-1.06 0-2.062.254-2.946.704-.285.145-.326.524-.1.75l.015.015c.16.16.407.19.611.09A5.478 5.478 0 0 1 8 10c.868 0 1.69.201 2.42.56.203.1.45.07.61-.091l.016-.015zM9.06 12.44c.196-.196.198-.52-.04-.66A1.99 1.99 0 0 0 8 11.5a1.99 1.99 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .707 0l.707-.707z" />
+              </svg>
+            </div>
+          </div>
+          <div class="my-auto">
+            <h4 class="fw-bolder mb-0">
+              <%- ipadd %>
+            </h4>
+            <p class="card-text font-small-3 mb-0">
+              IP KAMU
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12 col-md-4">
+    <div class="card">
+      <!-- <img src="/images/gh.png" class="card-img-top" alt="icon github"> -->
+      <div class="card-body">
+        <h5 class="card-title">Elaina Bot</h5>
+        <p class="card-text">
+          Bot WhatsApp yang didukung oleh Caliph API
+        </p>
+        <a href="https://elainabot.my.id/" class="btn btn-mel" target="_blank">Lihat</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-12 col-md-4">
+    <div class="card">
+      <img src="/images/pr.png" class="card-img-top" alt="icon price">
+      <div class="card-body">
+        <h5 class="card-title">Harga Spesial Terbatas</h5>
+        <p class="card-text text-mel">
+          Rp. <s>20,000</s> 10,000
+        </p>
+        <a href="/price" class="btn btn-mel">Lihat</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12 col-md-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Cek Apikey</h5>
+        <form action="/users/cek" method="GET">
+          <div class="form-floating">
+            <input type="text" id="apikey" name="apikey" class="form-control">
+            <button type="submit" class="btn btn-mel">Cek</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

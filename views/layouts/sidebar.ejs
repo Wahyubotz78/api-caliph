@@ -1,0 +1,268 @@
+<div class="page-sidebar">
+    <ul class="list-unstyled accordion-menu">
+        <li class="sidebar-title">
+            Utama
+        </li>
+        <% if (active_index) { %>
+            <li class="active-page">
+                <% } else { %>
+            <li>
+                <% } %>
+                    <a href="/"><i data-feather="home"></i>Dashboard</a>
+            </li>
+            <% if (isOwner) { %>
+                <li>
+                    <a><i data-feather="code"></i>Admin<i class="fas fa-chevron-right dropdown-icon"></i></a>
+                    <ul class="">
+                        <% admin.forEach( function( u ) { %>
+                            <li><a href="<%= u.url %>"><i class="far fa-circle"></i>
+                                    <%= u.name %>
+                                </a>
+                            </li>
+                            <% }) %>
+                    </ul>
+                </li>
+                <li>
+                    <a><i data-feather="code"></i>Premium<i class="fas fa-chevron-right dropdown-icon"></i></a>
+                    <ul class="">
+                        <% prem.forEach( function( u ) { %>
+                            <li><a href="<%= u.url %>" target="_blank"><i class="far fa-circle"></i>
+                                    <%= u.name %>
+                                </a>
+                            </li>
+                            <% }) %>
+                    </ul>
+                </li>
+                <% } %>
+                    <% if (user) { %>
+                        <li>
+                            <a><i data-feather="code"></i>Manajemen Akun<i
+                                    class="fas fa-chevron-right dropdown-icon"></i></a>
+                            <ul class="">
+                                <li><a href="/users/profile"><i class="fas fa-user"></i>Profil</a></li>
+                                <li><a href="/users/logout"><i class="fas fa-sign-out-alt"></i>Keluar</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <% } else { %>
+                            <li>
+                                <a href="/users/login"><i data-feather="log-in"></i>Masuk</a>
+                            </li>
+                            <li>
+                                <a href="/users/register"><i data-feather="user-plus"></i>Daftar</a>
+                            </li>
+                            <% } %>
+                                <% if (active_price) { %>
+                                    <li class="active-page">
+                                        <% } else { %>
+                                    <li>
+                                        <% } %>
+                                            <a href="/price"><i data-feather="dollar-sign"></i>Harga</a>
+                                    </li>
+                                    <% if (active_contact) { %>
+                                        <li class="active-page">
+                                            <% } else { %>
+                                        <li>
+                                            <% } %>
+                                                <a href="/contact"><i data-feather="phone"></i>Kontak Kami</a>
+                                        </li>
+                                        <li class="sidebar-title">
+                                            Fitur
+                                        </li>
+
+                                        <!-- Anime -->
+                                        <li>
+                                            <a><i data-feather="code"></i>Anime<i
+                                                    class="fas fa-chevron-right dropdown-icon"></i></a>
+                                            <ul class="">
+                                                <% anime.forEach( function( u ) { %>
+                                                    <li><a href="<%= u.url %><%= u.url.includes('?') ? '&apikey=' : '?apikey=' %><%- apikey %>" target="_blank"><i
+                                                                class="far fa-circle"></i>
+                                                            <%= u.name %>
+                                                        </a>
+                                                    </li>
+                                                    <% }) %>
+                                            </ul>
+                                        </li>
+
+                                        <!-- Canvas -->
+                                        <li>
+                                            <a><i data-feather="code"></i>Canvas<i
+                                                    class="fas fa-chevron-right dropdown-icon"></i></a>
+                                            <ul class="">
+                                                <% canvas.forEach( function( u ) { %>
+                                                    <li><a href="<%= u.url %><%= u.url.includes('?') ? '&apikey=' : '?apikey=' %><%- apikey %>" target="_blank"><i
+                                                                class="far fa-circle"></i>
+                                                            <%= u.name %>
+                                                        </a>
+                                                    </li>
+                                                    <% }) %>
+                                            </ul>
+                                        </li>
+
+                                        <!-- Downloader -->
+                                        <li>
+                                            <a><i data-feather="code"></i>Downloader<i
+                                                    class="fas fa-chevron-right dropdown-icon"></i></a>
+                                            <ul class="">
+                                                <% downloader.forEach( function( u ) { %>
+                                                    <li><a href="<%= u.url %><%= u.url.includes('?') ? '&apikey=' : '?apikey=' %><%- apikey %>" target="_blank"><i
+                                                                class="far fa-circle"></i>
+                                                            <%= u.name %>
+                                                        </a>
+                                                    </li>
+                                                    <% }) %>
+                                            </ul>
+                                        </li>
+
+                                        <!-- Games -->
+                                        <li>
+                                            <a><i data-feather="code"></i>Games<i
+                                                    class="fas fa-chevron-right dropdown-icon"></i></a>
+                                            <ul class="">
+                                                <% games.forEach( function( u ) { %>
+                                                    <li><a href="<%= u.url %><%= u.url.includes('?') ? '&apikey=' : '?apikey=' %><%- apikey %>" target="_blank"><i
+                                                                class="far fa-circle"></i>
+                                                            <%= u.name %>
+                                                        </a>
+                                                    </li>
+                                                    <% }) %>
+                                            </ul>
+                                        </li>
+
+                                        <!-- Image Maker -->
+                                        <li>
+                                            <a><i data-feather="code"></i>Image Maker<i
+                                                    class="fas fa-chevron-right dropdown-icon"></i></a>
+                                            <ul class="">
+                                                <% textpro.forEach( function( u ) { %>
+                                                    <li><a href="<%= u.url %><%= u.url.includes('?') ? '&apikey=' : '?apikey=' %><%- apikey %>" target="_blank"><i
+                                                                class="far fa-circle"></i>
+                                                            <%= u.name %>
+                                                        </a>
+                                                    </li>
+                                                    <% }) %>
+                                            </ul>
+                                        </li>
+
+                                        <!-- NSFW -->
+                                        <li>
+                                            <a><i data-feather="code"></i>NSFW<i
+                                                    class="fas fa-chevron-right dropdown-icon"></i></a>
+                                            <ul class="">
+                                                <% nsfw.forEach( function( u ) { %>
+                                                    <li><a href="<%= u.url %><%= u.url.includes('?') ? '&apikey=' : '?apikey=' %><%- apikey %>" target="_blank"><i
+                                                                class="far fa-circle"></i>
+                                                            <%= u.name %>
+                                                        </a>
+                                                    </li>
+                                                    <% }) %>
+                                            </ul>
+                                        </li>
+
+                                        <!-- Primbon -->
+                                        <li>
+                                            <a><i data-feather="code"></i>Primbon<i
+                                                    class="fas fa-chevron-right dropdown-icon"></i></a>
+                                            <ul class="">
+                                                <% primbon.forEach( function( u ) { %>
+                                                    <li><a href="<%= u.url %><%= u.url.includes('?') ? '&apikey=' : '?apikey=' %><%- apikey %>" target="_blank"><i
+                                                                class="far fa-circle"></i>
+                                                            <%= u.name %>
+                                                        </a>
+                                                    </li>
+                                                    <% }) %>
+                                            </ul>
+                                        </li>
+
+                                        <!-- Random -->
+                                        <li>
+                                            <a><i data-feather="code"></i>Random<i
+                                                    class="fas fa-chevron-right dropdown-icon"></i></a>
+                                            <ul class="">
+                                                <% random.forEach( function( u ) { %>
+                                                    <li><a href="<%= u.url %><%= u.url.includes('?') ? '&apikey=' : '?apikey=' %><%- apikey %>" target="_blank"><i
+                                                                class="far fa-circle"></i>
+                                                            <%= u.name %>
+                                                        </a>
+                                                    </li>
+                                                    <% }) %>
+                                            </ul>
+                                        </li>
+
+                                        <!-- Religion -->
+                                        <li>
+                                            <a><i data-feather="code"></i>Religion<i
+                                                    class="fas fa-chevron-right dropdown-icon"></i></a>
+                                            <ul class="">
+                                                <% religion.forEach( function( u ) { %>
+                                                    <li><a href="<%= u.url %><%= u.url.includes('?') ? '&apikey=' : '?apikey=' %><%- apikey %>" target="_blank"><i
+                                                                class="far fa-circle"></i>
+                                                            <%= u.name %>
+                                                        </a>
+                                                    </li>
+                                                    <% }) %>
+                                            </ul>
+                                        </li>
+
+                                        <!-- Search  -->
+                                        <li>
+                                            <a><i data-feather="code"></i>Search<i
+                                                    class="fas fa-chevron-right dropdown-icon"></i></a>
+                                            <ul class="">
+                                                <% search.forEach( function( u ) { %>
+                                                    <li><a href="<%= u.url %><%= u.url.includes('?') ? '&apikey=' : '?apikey=' %><%- apikey %>" target="_blank"><i
+                                                                class="far fa-circle"></i>
+                                                            <%= u.name %>
+                                                        </a>
+                                                    </li>
+                                                    <% }) %>
+                                            </ul>
+                                        </li>
+
+                                        <!-- Stalk  -->
+                                        <li>
+                                            <a><i data-feather="code"></i>Stalk<i
+                                                    class="fas fa-chevron-right dropdown-icon"></i></a>
+                                            <ul class="">
+                                                <% stalk.forEach( function( u ) { %>
+                                                    <li><a href="<%= u.url %><%= u.url.includes('?') ? '&apikey=' : '?apikey=' %><%- apikey %>" target="_blank"><i
+                                                                class="far fa-circle"></i>
+                                                            <%= u.name %>
+                                                        </a>
+                                                    </li>
+                                                    <% }) %>
+                                            </ul>
+                                        </li>
+
+                                        <!-- Tools -->
+                                        <li>
+                                            <a><i data-feather="code"></i>Tools<i
+                                                    class="fas fa-chevron-right dropdown-icon"></i></a>
+                                            <ul class="">
+                                                <% tools.forEach( function( u ) { %>
+                                                    <li><a href="<%= u.url %><%= u.url.includes('?') ? '&apikey=' : '?apikey=' %><%- apikey %>" target="_blank"><i
+                                                                class="far fa-circle"></i>
+                                                            <%= u.name %>
+                                                        </a>
+                                                    </li>
+                                                    <% }) %>
+                                            </ul>
+                                        </li>
+
+                                        <!-- Tanpa Kategori -->
+                                        <li>
+                                            <a><i data-feather="code"></i>Tanpa Kategori<i
+                                                    class="fas fa-chevron-right dropdown-icon"></i></a>
+                                            <ul class="">
+                                                <% nocategory.forEach( function( u ) { %>
+                                                    <li><a href="<%= u.url %><%= u.url.includes('?') ? '&apikey=' : '?apikey=' %><%- apikey %>" target="_blank"><i
+                                                                class="far fa-circle"></i>
+                                                            <%= u.name %>
+                                                        </a>
+                                                    </li>
+                                                    <% }) %>
+                                            </ul>
+                                        </li>
+    </ul>
+</div>

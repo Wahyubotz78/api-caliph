@@ -1,0 +1,349 @@
+<!-- Modal SnK at Register -->
+<div class="modal fade" id="snkr" tabindex="-1" aria-labelledby="snkr" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="snkTitle">Syarat & Ketentuan</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>1. Dilarang melakukan spam request yang mengakibatkan server down.</p>
+                <p>2. Membuat banyak akun pada IP yang sama maka IP otomatis akan diblokir.</p>
+                <p>3. Pemilik sewaktu-waktu dapat mengubah ketentuan di website ini, demi menjaga kualitas
+                    website.</p>
+                <p>4. Dilarang keras untuk menyebarkan apikey Anda, akan diblokir.</p>
+                <p>5. Jangan ditembak atuh, sakit.</p>
+                <p>6. Pemilik tidak bertanggung jawab atas apa yang Anda lakukan dalam penggunaan website ini.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal SnK -->
+<div class="modal fade" id="snk" tabindex="-1" aria-labelledby="snk" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="snkTitle">Syarat & Ketentuan</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>1. Dilarang melakukan spam request yang mengakibatkan server down.</p>
+                <p>2. Membuat banyak akun pada IP yang sama maka IP otomatis akan diblokir.</p>
+                <p>3. Pemilik sewaktu-waktu dapat mengubah ketentuan di website ini, demi menjaga kualitas
+                    website.</p>
+                <p>4. Dilarang keras untuk menyebarkan apikey Anda, akan diblokir.</p>
+                <p>5. Jangan ditembak atuh, sakit.</p>
+                <p>6. Pemilik tidak bertanggung jawab atas apa yang Anda lakukan dalam penggunaan website ini.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal change password -->
+<div class="modal fade" id="changePassword" tabindex="-1" aria-labelledby="changePassword" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Ganti Password</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form method="POST" action="/users/gantipassword">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="oldPass" class="form-label">Password Sebelumnya</label>
+                        <input type="password" class="form-control" id="oldPass" name="oldPass" autofocus>
+                    </div>
+                    <div class="mb-3">
+                        <label for="newPass" class="form-label">Password Baru</label>
+                        <input type="password" class="form-control" id="newPass" name="newPass">
+                    </div>
+                    <div class="mb-3">
+                        <label for="newPass2" class="form-label">Konfirmasi Password Baru</label>
+                        <input type="password" class="form-control" id="newPass2" name="newPass2">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                    <button type="submit" class="btn btn-primary">Simpan</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal change apikey -->
+<div class="modal fade" id="changeKey" tabindex="-1" aria-labelledby="changeKey" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Ganti Apikey</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form method="POST" action="/users/gantiapikey">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="apikey" class="form-label">Apikey Baru</label>
+                        <input type="text" class="form-control" id="apikey" name="apikey" autofocus>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                    <button type="submit" class="btn btn-primary">Simpan</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal add Premium -->
+<div class="modal fade" id="addPremium" tabindex="-1" aria-labelledby="addPremium" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Tambah Premium</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form method="POST" action="/premium/add-premium">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username</label>
+                        <input type="text" class="form-control" id="username" name="username" autofocus
+                            placeholder="username">
+                    </div>
+                    <div class="form-floating">
+                        <select class="form-select" id="expired" name="expired"
+                            aria-label="Floating label select example">
+                            <option selected>Klik untuk memilih</option>
+                            <option value="1d">1 Hari</option>
+                            <option value="7d">7 Hari</option>
+                            <option value="15d">15 Hari</option>
+                            <option value="30d">30 Hari</option>
+                        </select>
+                        <label for="expired">Kedaluarsa</label>
+                    </div>
+                    <div class="mb-3">
+                        <label for="customKey" class="form-label">Custom key</label>
+                        <input type="text" class="form-control" id="customKey" name="customKey"
+                            placeholder="custom key">
+                    </div>
+                    <div class="mb-3">
+                        <label for="token" class="form-label">Token</label>
+                        <input type="text" class="form-control" id="token" name="token" placeholder="token">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                    <button type="submit" class="btn btn-primary">Tambah</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal add Premium from List -->
+<div class="modal fade" id="addPremiumFromList" tabindex="-1" aria-labelledby="addPremiumFromList" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Tambah Premium</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form method="POST" action="/premium/add-premium">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username</label>
+                        <input type="text" class="form-control" id="username" name="username" autofocus
+                            placeholder="username">
+                    </div>
+                    <div class="form-floating">
+                        <select class="form-select" id="expired" name="expired"
+                            aria-label="Floating label select example">
+                            <option selected>Klik untuk memilih</option>
+                            <option value="1d">1 Hari</option>
+                            <option value="7d">7 Hari</option>
+                            <option value="15d">15 Hari</option>
+                            <option value="30d">30 Hari</option>
+                        </select>
+                        <label for="expired">Kedaluarsa</label>
+                    </div>
+                    <!-- <div class="mb-3">
+                        <label for="expired" class="form-label">Expired</label>
+                        <input type="text" class="form-control" id="expired" name="expired" placeholder="expired">
+                    </div> -->
+                    <div class="mb-3">
+                        <label for="customKey" class="form-label">Custom key</label>
+                        <input type="text" class="form-control" id="customKey" name="customKey"
+                            placeholder="custom key">
+                    </div>
+                    <div class="mb-3">
+                        <label for="token" class="form-label">Token</label>
+                        <input type="text" class="form-control" id="token" name="token" placeholder="token">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                    <button type="submit" class="btn btn-primary">Tambah</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal delete Premium -->
+<div class="modal fade" id="delPremium" tabindex="-1" aria-labelledby="delPremium" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Hapus Premium</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form method="POST" action="/premium/delete-premium">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username</label>
+                        <input type="text" class="form-control" id="username" name="username" autofocus
+                            placeholder="username">
+                    </div>
+                    <div class="mb-3">
+                        <label for="token" class="form-label">Token</label>
+                        <input type="text" class="form-control" id="token" name="token" placeholder="token">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                    <button type="submit" class="btn btn-primary">Hapus</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal delete Premium from List -->
+<div class="modal fade" id="delPremiumFromList" tabindex="-1" aria-labelledby="delPremiumFromList" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Hapus Premium</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form method="POST" action="/premium/delete-premium">
+                <div class="modal-body">
+                    <!-- <div class="mb-3"> -->
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="username"
+                        value="">
+                    <!-- </div> -->
+                    <div class="mb-3">
+                        <label for="token" class="form-label">Token</label>
+                        <input type="text" class="form-control" id="token" name="token" placeholder="token" autofocus>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                    <button type="submit" class="btn btn-primary">Hapus</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal reset Limit -->
+<div class="modal fade" id="resLimit" tabindex="-1" aria-labelledby="resLimit" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Reset Limit</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form method="POST" action="/admin/reset-limit">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username</label>
+                        <input type="text" class="form-control" id="username" name="username" autofocus
+                            placeholder="username">
+                    </div>
+                    <div class="mb-3">
+                        <label for="token" class="form-label">Token</label>
+                        <input type="text" class="form-control" id="token" name="token" placeholder="token">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                    <button type="submit" class="btn btn-primary">Reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal reset All Limit -->
+<div class="modal fade" id="resAllLimit" tabindex="-1" aria-labelledby="resAllLimit" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Reset Semua Limit</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form method="POST" action="/admin/resetall">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="token" class="form-label">Token</label>
+                        <input type="text" class="form-control" id="token" name="token" placeholder="token">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                    <button type="submit" class="btn btn-primary">Reset Semua</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal delete Account -->
+<div class="modal fade" id="delAcc" tabindex="-1" aria-labelledby="delAcc" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Hapus Akun</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form method="POST" action="/admin/delete-user">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username</label>
+                        <input type="text" class="form-control" id="username" name="username" autofocus
+                            placeholder="username">
+                    </div>
+                    <div class="mb-3">
+                        <label for="token" class="form-label">Token</label>
+                        <input type="text" class="form-control" id="token" name="token" placeholder="token">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                    <button type="submit" class="btn btn-primary">Hapus</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        $("#delPremiumFL").click(function () {
+            var username = $(this).data('id')
+            console.log(username)
+            $("#username").val(username)
+        })
+    });
+</script>

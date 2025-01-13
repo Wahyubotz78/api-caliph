@@ -1,0 +1,76 @@
+<%- include('../layouts/header') %>
+
+    <body class="login-page">
+        <div class='loader'>
+            <div class='spinner-grow text-mel' role='status'>
+                <span class='sr-only'>Loading...</span>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="col-md-12 col-lg-5">
+                    <div class="card login-box-container">
+                        <div class="card-body">
+                            <div class="authent-logo">
+                                <img src="/images/logo.png" alt="logo" width="40">
+                            </div>
+                            <div class="authent-text">
+                                <p>Selamat datang di Caliph Rest API!</p>
+                            </div>
+
+                            <%- include('../layouts/msg') %>
+                                <%- include('../layouts/errors') %>
+
+                                    <form method="POST" action="/users/register">
+                                        <div class="mb-3">
+                                            <div class="form-floating">
+                                                <input id="email" name="email" type="email" class="form-control"
+                                                    placeholder="name@example.com" required>
+                                                <label for="floatingInput">Email address</label>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="form-floating">
+                                                <input id="username" name="username" type="text" class="form-control"
+                                                    placeholder="Username" required>
+                                                <label for="floatingInput">Username</label>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="form-floating">
+                                                <input id="password" name="password" type="password"
+                                                    class="form-control" placeholder="Password" required>
+                                                <label for="floatingPassword">Password</label>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="form-floating">
+                                                <input id="confirmPassword" name="confirmPassword" type="password"
+                                                    class="form-control" placeholder="Konfirmasi Password" required>
+                                                <label for="floatingPassword">Konfirmasi Password</label>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 form-check">
+                                            <label class="form-check-label" required>Saya setuju dengan <a href="#"
+                                                    for="snk" data-bs-toggle="modal" data-bs-target="#snkr"
+                                                    class="a-mel">Syarat
+                                                    dan Ketentuan</a>
+                                                <input type="checkbox" class="form-check-input" id="snk">
+                                            </label>
+                                        </div>
+                                        <div class="d-grid">
+                                            <button type="submit" class="btn btn-mel m-b-xs">Daftar</button>
+                                        </div>
+                                    </form>
+                                    <div class="authent-login">
+                                        <p>Sudah punya akun? <a href="/users/login" class="a-mel">Masuk</a></p>
+                                    </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <%- include('../layouts/modal') %>
+
+            <%- include('../layouts/footer') %>

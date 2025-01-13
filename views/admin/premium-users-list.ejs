@@ -1,0 +1,40 @@
+<div>
+    <%- include('../layouts/msg') %>
+        <%- include('../layouts/errors') %>
+</div>
+
+<div class="row">
+    <div class="col">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Daftar Pengguna Premium</h5>
+                <p class="card-description">
+                </p>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Username</th>
+                            <th scope="col">Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% data.forEach( function( u ) { %>
+                            <tr>
+                                <td>
+                                    <%= u.username %>
+                                </td>
+                                <td>
+                                    <a href="#" class="btn btn-outline-danger m-b-xs" id="delPremiumFL"
+                                        for="delPremiumFromList" data-bs-toggle="modal"
+                                        data-bs-target="#delPremiumFromList" data-id="<%= u.username %>">- Prem</a>
+                                </td>
+                            </tr>
+                            <% }) %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('../layouts/modal') %>

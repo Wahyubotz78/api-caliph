@@ -1,0 +1,86 @@
+<div>
+    <%- include('../layouts/msg') %>
+        <%- include('../layouts/errors') %>
+</div>
+
+<div class="row">
+    <div class="col-sm-12 col-md-4">
+        <div class="card text-center">
+            <div class="card-header">
+                <ul class="nav nav-pills card-header-pills">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" for="addPremium" data-bs-toggle="modal"
+                            data-bs-target="#addPremium"><i data-feather="user-plus"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Tambah Premium</h5>
+                <p class="card-text"></p>
+                <a href="#" class="btn btn-primary" for="addPremium" data-bs-toggle="modal"
+                    data-bs-target="#addPremium"><i data-feather="plus"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-12 col-md-4">
+        <div class="card text-center">
+            <div class="card-header">
+                <ul class="nav nav-pills card-header-pills">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" for="delPremium" data-bs-toggle="modal"
+                            data-bs-target="#delPremium"><i data-feather="user-minus"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Hapus Premium</h5>
+                <p class="card-text"></p>
+                <a href="#" class="btn btn-primary" for="delPremium" data-bs-toggle="modal"
+                    data-bs-target="#delPremium"><i data-feather="minus"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-12 col-md-4">
+        <div class="card text-center">
+            <div class="card-header">
+                <ul class="nav nav-pills card-header-pills">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" for="resLimit" data-bs-toggle="modal" data-bs-target="#resLimit"><i
+                                data-feather="refresh-cw"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Reset Limit</h5>
+                <p class="card-text"></p>
+                <a href="#" class="btn btn-primary" for="resLimit" data-bs-toggle="modal" data-bs-target="#resLimit"><i
+                        data-feather="refresh-cw"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-sm-12 col-md-4">
+        <div class="card text-center">
+            <div class="card-header">
+                <ul class="nav nav-pills card-header-pills">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" for="resAllLimit" data-bs-toggle="modal"
+                            data-bs-target="#resAllLimit"><i data-feather="refresh-cw"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Reset Semua Limit</h5>
+                <p class="card-text"></p>
+                <a href="#" class="btn btn-primary" for="resAllLimit" data-bs-toggle="modal"
+                    data-bs-target="#resAllLimit"><i data-feather="refresh-cw"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('../layouts/modal') %>

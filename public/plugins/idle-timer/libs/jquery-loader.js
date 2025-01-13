@@ -1,0 +1,1 @@
+!function(){var r="../libs/jquery/jquery.js",c=location.search.match(/[?&]jquery=(.*?)(?=&|$)/);c&&(r="http://code.jquery.com/jquery-"+c[1]+".js"),document.write('<script src="'+r+'"><\/script>')}();

@@ -1,0 +1,52 @@
+<div>
+    <%- include('../layouts/msg') %>
+        <%- include('../layouts/errors') %>
+</div>
+
+<div class="row">
+    <div class="col">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Daftar Pengguna Premium</h5>
+                <p class="card-description">
+                </p>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Username</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Token</th>
+                            <th scope="col">Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% data.forEach( function( u ) { %>
+                            <tr>
+                                <td>
+                                    <%= u.username %>
+                                </td>
+                                <td>
+                                    <%= u.email %>
+                                </td>
+                                <td>
+                                    <%= u.token %>
+                                </td>
+                                <td>
+                                    <form action="/admin/delete-user" method="POST">
+                                        <input type="hidden" id="username" name="username" value="<%= u.username %>">
+                                        <input type="hidden" id="redirect" name="redirect"
+                                            value="/admin/unverif-users-list">
+                                        <button class="btn btn-outline-danger m-b-xs"
+                                            onClick="return confirm('Yakin ingin menghapus user \'<%= u.username %>\'?');">Hapus</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            <% }) %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('../layouts/modal') %>
